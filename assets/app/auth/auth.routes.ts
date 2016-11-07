@@ -1,12 +1,13 @@
 import { Routes } from "@angular/router";
-import { SignupComponent } from "./auth/signup.component";
-import { SigninComponent } from "./auth/signin.component";
-import { LogoutComponent } from "./auth/logout.component";
+import { SignupComponent } from "./signup.component";
+import { SigninComponent } from "./signin.component";
+import { LogoutComponent } from "./logout.component";
 
 export const AUTH_ROUTES: Routes = [
 	{
 		path: '', 
-		redirectTo: 'signup'
+		redirectTo: 'signup',
+    pathMatch: 'full'
 	},
 	{
 		path: 'signup',

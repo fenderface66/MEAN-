@@ -1,1 +1,13 @@
-<h1>Sign In</h1>
+<div class="col-md-8 col-md-offset-2">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Mail</label>
+      <input type="email" id="email" class="form-control" formControlName="email" ng-pattern="/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" class="form-control" formControlName="password">
+    </div>
+    <button class="btn-primary btn" type="submit" [disabled]="!myForm.valid">Submit</button>
+  </form>
+</div> 

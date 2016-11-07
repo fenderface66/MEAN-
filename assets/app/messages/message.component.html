@@ -1,5 +1,5 @@
 <article class="panel panel-default">
-  <div class="panel-body" [ngStyle]="{backgroundColor: color}" (mouseenter)="color = 'green'">
+  <div class="panel-body">
     {{message.content}}
   </div>
   <footer class="panel-footer">
@@ -7,8 +7,8 @@
       {{message.username}}
     </div>
     <div class="config">
-      <a href="#" (click)="onEdit()">Edit</a>
-      <a href="">Delete</a>
+      <a (click)="onEdit()">Edit</a>
+      <a (click)="onDelete()">Delete</a>
     </div>
   </footer>
 </article>
